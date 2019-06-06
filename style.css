@@ -14,10 +14,24 @@ nav{
   align-items: center;
   justify-content: space-around;
 }
+nav a{
+  color: lawngreen;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 16pt;
+  text-decoration: none;
+}
 
-img{
+nav a:hover{
+  color: blueviolet;
+}
+
+
+nav img{
   cursor: pointer;
   display: none;
+  border: 4px dashed pink;
+  padding: 10px;
+  border-radius: 100%;
 }
 
 header{
@@ -45,6 +59,23 @@ footer{
   background-color: magenta;
 }
 
+.memeGretchen{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  max-width: 90%;
+  border: 4px dotted magenta;
+  padding: 10px;
+}
+
+header, section, aside, div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
 @media(max-width: 768px){
   body{
     grid-template-areas: 'navbar navbar navbar navbar'
@@ -53,7 +84,7 @@ footer{
                          'footer footer footer footer';
     grid-template-rows: 20vh 70vh 70vh 40vh;              
   }
-  nav a{
+  nav a{ 
     display: none;
   }
   nav img{
@@ -69,6 +100,6 @@ footer{
                          'aside aside aside aside'
                          'div div div div'
                          'footer footer footer footer';
-    grid-template-rows: 20vh 50vh 50vh 50vh 50vh 40vh;
+    grid-template-rows: 20vh 70vh 70vh 70vh 70vh 40vh;
   }
 }
