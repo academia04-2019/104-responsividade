@@ -19,10 +19,12 @@ nav a{
   font-family: 'Shadows Into Light', cursive;
   font-size: 16pt;
   text-decoration: none;
+  transition: 2s;
 }
 
 nav a:hover{
   color: blueviolet;
+  transition: 2s;
 }
 
 
