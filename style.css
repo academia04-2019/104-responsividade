@@ -2,10 +2,9 @@ body{
   margin: 0;
   display: grid;
   grid-template-areas: 'navbar navbar navbar navbar'
-                       'header header header header'
-                       'section section aside aside'
+                       'header section aside div'
                        'footer footer footer footer';
-  grid-template-rows: 20vh 30vh 60vh 40vh;
+  grid-template-rows: 20vh 70vh 40vh;
 }
 
 nav{
@@ -36,6 +35,11 @@ aside{
   background-color: orange;
 }
 
+div{
+  grid-area: div;
+  background-color: tomato;
+}
+
 footer{
   grid-area: footer;
   background-color: magenta;
@@ -44,17 +48,27 @@ footer{
 @media(max-width: 768px){
   body{
     grid-template-areas: 'navbar navbar navbar navbar'
-                         'header header header header'
-                         'section section section section'
-                         'aside aside aside aside'
+                         'header header section section'
+                         'aside aside div div'
                          'footer footer footer footer';
-    grid-template-rows: 20vh 30vh 60vh 60vh 40vh;
-    grid-gap: 10px;
+    grid-template-rows: 20vh 70vh 70vh 40vh;              
   }
   nav a{
     display: none;
   }
   nav img{
     display: block;
+  }
+}
+
+@media(max-width:425px){
+  body{
+    grid-template-areas: 'navbar navbar navbar navbar'
+                         'header header header header'
+                         'section section section section'
+                         'aside aside aside aside'
+                         'div div div div'
+                         'footer footer footer footer';
+    grid-template-rows: 20vh 50vh 50vh 50vh 50vh 40vh;
   }
 }
